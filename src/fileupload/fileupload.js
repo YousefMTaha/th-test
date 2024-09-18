@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import { AppError } from "../utils/appError.js";
 
 export const fileupload = (foldername) => {
-  const storage = diskStorage();
+  const storage = diskStorage({});
 
   function filefilter(req, file, cb) {
     if (file.mimetype.startWith("image")) {
